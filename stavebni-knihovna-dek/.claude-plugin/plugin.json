@@ -1,6 +1,7 @@
 {
   "name": "stavebni-knihovna-dek",
-  "version": "0.4.2",
+  "displayName": "Stavební knihovna DEK",
+  "version": "0.4.3",
   "description": "Stavební knihovna DEK (DEK Building Library) for Claude: search building constructions, systems, materials and products, get their technical parameters (layers, U-value, fire resistance), Environmental Product Declaration (EPD) data and ÚRS price-system items for cost estimating.",
   "author": {
     "name": "DEKSOFT",
@@ -21,5 +22,9 @@
     "skladby",
     "DEK",
     "Czech"
-  ]
+  ],
+  "icon": "./icon.png",
+  "documentationUrl": "https://github.com/JanStasek/Plugin-Stavebni-knihovna-DEK/blob/main/stavebni-knihovna-dek/README.md",
+  "privacyPolicyUrl": "https://deksoft.eu/ochrana-osobnich-udaju",
+  "termsOfServiceUrl": "https://deksoft.eu/programy/licencnipodminky"
 }
