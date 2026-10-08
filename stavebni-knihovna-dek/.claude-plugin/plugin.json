@@ -1,7 +1,7 @@
 {
   "name": "stavebni-knihovna-dek",
   "displayName": "Stavební knihovna DEK",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Stavební knihovna DEK (DEK Building Library) for Claude: search building constructions, systems, materials and products, get their technical parameters (layers, U-value, fire resistance), Environmental Product Declaration (EPD) data and ÚRS price-system items for cost estimating.",
   "author": {
     "name": "DEKSOFT",
