@@ -1,0 +1,15 @@
+{
+  "name": "dek",
+  "owner": {
+    "name": "DEKSOFT",
+    "email": "info@deksoft.eu",
+    "url": "https://www.deksoft.eu"
+  },
+  "plugins": [
+    {
+      "name": "stavebni-knihovna-dek",
+      "source": "./",
+      "description": "Stavební knihovna DEK: skladby, materiály, EPD a položky ÚRS."
+    }
+  ]
+}

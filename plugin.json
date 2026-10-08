@@ -1,0 +1,25 @@
+{
+  "name": "stavebni-knihovna-dek",
+  "version": "0.4.0",
+  "description": "Stavební knihovna DEK (DEK Building Library) for Claude: search building constructions, systems, materials and products, get their technical parameters (layers, U-value, fire resistance), Environmental Product Declaration (EPD) data and ÚRS price-system items for cost estimating.",
+  "author": {
+    "name": "DEKSOFT",
+    "email": "info@deksoft.eu",
+    "url": "https://www.deksoft.eu"
+  },
+  "homepage": "TODO: URL stránky pluginu nebo Stavební knihovny",
+  "repository": "TODO: https://github.com/<org>/stavebni-knihovna-dek",
+  "license": "TODO: licence pluginu (např. Apache-2.0 jako u API)",
+  "keywords": [
+    "construction",
+    "building",
+    "BIM",
+    "EPD",
+    "LCA",
+    "materials",
+    "stavebnictví",
+    "skladby",
+    "DEK",
+    "Czech"
+  ]
+}
