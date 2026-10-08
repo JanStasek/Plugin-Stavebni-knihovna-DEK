@@ -10,7 +10,8 @@ formulář vyžaduje; český popis je v README pluginu.
 - [x] Marketplace `.claude-plugin/marketplace.json` – `claude plugin validate` prochází
 - [x] MCP server `https://api.deksoft.eu/mcp` odpovídá (ověřeno 2026-10-08 dotazem `searchConstructions`)
 - [x] README s popisem, příklady, instalací a kontaktem
-- [x] Zásady ochrany osobních údajů: https://deksoft.eu/ochrana-osobnich-udaju (v README)
+- [x] Zásady ochrany osobních údajů: https://deksoft.eu/ochrana-osobnich-udaju (v README a v `plugin.json` jako `privacyPolicyUrl`)
+- [x] Ikona `stavebni-knihovna-dek/icon.png` (v `plugin.json` jako `icon`); údaje pro výpis v adresáři (`displayName`, `documentationUrl`, `termsOfServiceUrl`) v `plugin.json`
 - [x] Licence Apache-2.0 + `NOTICE` s povinností uvést zdroj (`LICENSE`, `NOTICE`, pole `license` v `plugin.json`)
 - [x] Repozitář je veřejný
 - [ ] Sloučit větev s úpravami do `main` (instalace z GitHubu bere výchozí větev)
@@ -23,10 +24,11 @@ formulář vyžaduje; český popis je v README pluginu.
 |---|---|
 | Plugin name | `stavebni-knihovna-dek` |
 | Display name | Stavební knihovna DEK (DEK Building Library) |
-| Version | 0.4.2 |
+| Icon | `stavebni-knihovna-dek/icon.png` |
+| Version | 0.4.3 |
 | Publisher | DEKSOFT |
 | Contact e-mail | info@deksoft.eu |
-| Website | https://www.deksoft.eu |
+| Website | https://deksoft.eu |
 | Repository | https://github.com/JanStasek/Plugin-Stavebni-knihovna-DEK |
 | Plugin path | `stavebni-knihovna-dek` (marketplace `dek`) |
 | Category | Construction / Engineering |

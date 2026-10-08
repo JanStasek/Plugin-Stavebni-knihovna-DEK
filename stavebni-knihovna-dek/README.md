@@ -1,5 +1,7 @@
 # Stavební knihovna DEK – plugin pro Claude
 
+<img src="icon.png" alt="Stavební knihovna DEK" width="96" height="96">
+
 Plugin zpřístupňuje v Claude Stavební knihovnu DEK: skladby konstrukcí
 a systémů, materiály a výrobky,
 jejich environmentální data (EPD) a položky cenové soustavy ÚRS pro
@@ -31,7 +33,7 @@ Plugin se připojuje ke vzdálenému MCP serveru `https://api.deksoft.eu/mcp`
 Plugin (skill, příkazy, konfigurace) je svobodný software pod licencí
 [Apache License 2.0](LICENSE). Při jeho šíření nebo úpravách je nutné
 zachovat soubor [NOTICE](NOTICE) a uvést zdroj: **Stavební knihovna DEK,
-DEKSOFT – https://www.deksoft.eu**.
+DEKSOFT – https://deksoft.eu**.
 
 Data z knihovny (skladby, materiály, EPD, položky ÚRS) nejsou součástí
 licence pluginu a řídí se licenčními podmínkami DEKSOFT.
