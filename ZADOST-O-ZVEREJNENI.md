@@ -10,9 +10,10 @@ formulář vyžaduje; český popis je v README pluginu.
 - [x] Marketplace `.claude-plugin/marketplace.json` – `claude plugin validate` prochází
 - [x] MCP server `https://api.deksoft.eu/mcp` odpovídá (ověřeno 2026-10-08 dotazem `searchConstructions`)
 - [x] README s popisem, příklady, instalací a kontaktem
-- [ ] **Zásady ochrany osobních údajů** – doplnit URL do README a do formuláře
-- [ ] **Licence pluginu** – rozhodnout (např. Apache-2.0 jako u API), přidat soubor `LICENSE` a pole `"license"` do `plugin.json`
-- [ ] Repozitář nastavit jako veřejný (adresář pluginů musí mít ke zdrojům přístup)
+- [x] Zásady ochrany osobních údajů: https://deksoft.eu/ochrana-osobnich-udaju (v README)
+- [x] Licence Apache-2.0 + `NOTICE` s povinností uvést zdroj (`LICENSE`, `NOTICE`, pole `license` v `plugin.json`)
+- [x] Repozitář je veřejný
+- [ ] Sloučit větev s úpravami do `main` (instalace z GitHubu bere výchozí větev)
 - [ ] Volitelně: přesunout repozitář pod organizaci DEKSOFT a aktualizovat URL v `plugin.json`, README a v instalačních příkazech
 - [ ] Otestovat instalaci z GitHubu: `/plugin marketplace add JanStasek/Plugin-Stavebni-knihovna-DEK` → `/plugin install stavebni-knihovna-dek@dek` → `/skladba plochá střecha, U ≤ 0,16`
 
@@ -31,7 +32,8 @@ formulář vyžaduje; český popis je v README pluginu.
 | Category | Construction / Engineering |
 | MCP server | `https://api.deksoft.eu/mcp` (remote HTTP, no authentication) |
 | Terms | https://deksoft.eu/programy/licencnipodminky |
-| Privacy policy | **TODO** |
+| Privacy policy | https://deksoft.eu/ochrana-osobnich-udaju |
+| License | Apache-2.0 (attribution via NOTICE) |
 | Languages | Czech (data), Czech + English (queries) |
 
 ### Short description
@@ -53,7 +55,8 @@ assembly.
 Contents:
 - MCP connector to the DEKSOFT API (read-only, no account required)
 - Skill `stavebni-knihovna` – how to search, read and present library data
-  correctly (never inventing values, EPD recalculation, ÚRS item handling)
+  correctly (never inventing values, EPD recalculation, ÚRS item handling,
+  citing the DEK Building Library as the source)
 - Slash commands `/skladba`, `/material`, `/epd`, `/oceneni`
 
 ### Example prompts

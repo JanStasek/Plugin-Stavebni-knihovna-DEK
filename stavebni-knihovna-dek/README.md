@@ -27,7 +27,16 @@ Plugin se připojuje ke vzdálenému MCP serveru `https://api.deksoft.eu/mcp`
 /plugin install stavebni-knihovna-dek@dek
 ```
 
+## Licence
+Plugin (skill, příkazy, konfigurace) je svobodný software pod licencí
+[Apache License 2.0](LICENSE). Při jeho šíření nebo úpravách je nutné
+zachovat soubor [NOTICE](NOTICE) a uvést zdroj: **Stavební knihovna DEK,
+DEKSOFT – https://www.deksoft.eu**.
+
+Data z knihovny (skladby, materiály, EPD, položky ÚRS) nejsou součástí
+licence pluginu a řídí se licenčními podmínkami DEKSOFT.
+
 ## Podmínky a podpora
-- Licenční podmínky: https://deksoft.eu/programy/licencnipodminky
+- Licenční podmínky dat: https://deksoft.eu/programy/licencnipodminky
+- Ochrana osobních údajů: https://deksoft.eu/ochrana-osobnich-udaju
 - Kontakt: info@deksoft.eu
-- TODO: odkaz na zásady ochrany osobních údajů

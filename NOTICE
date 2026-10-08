@@ -1,0 +1,10 @@
+Stavební knihovna DEK – plugin pro Claude
+Copyright 2026 DEKSOFT (https://www.deksoft.eu)
+
+Tento produkt je licencován pod Apache License 2.0 (viz soubor LICENSE).
+Při šíření pluginu nebo odvozených děl musí být zachováno toto upozornění
+a uveden zdroj: Stavební knihovna DEK, DEKSOFT – https://www.deksoft.eu
+
+Data zpřístupněná přes MCP server https://api.deksoft.eu/mcp (skladby,
+materiály, EPD, položky ÚRS) nejsou součástí této licence; řídí se
+licenčními podmínkami DEKSOFT: https://deksoft.eu/programy/licencnipodminky

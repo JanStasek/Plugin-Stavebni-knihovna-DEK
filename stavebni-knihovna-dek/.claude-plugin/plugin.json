@@ -9,6 +9,7 @@
   },
   "homepage": "https://www.deksoft.eu",
   "repository": "https://github.com/JanStasek/Plugin-Stavebni-knihovna-DEK",
+  "license": "Apache-2.0",
   "keywords": [
     "construction",
     "building",

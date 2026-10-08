@@ -20,3 +20,8 @@ stavebni-knihovna-dek/
 ```
 
 Kontrola: `claude plugin validate .` a `claude plugin validate stavebni-knihovna-dek`.
+
+## Licence
+[Apache License 2.0](LICENSE) – při šíření zachovejte [NOTICE](NOTICE)
+s uvedením zdroje (Stavební knihovna DEK, DEKSOFT). Ochrana osobních
+údajů: https://deksoft.eu/ochrana-osobnich-udaju
