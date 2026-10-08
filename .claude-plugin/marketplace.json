@@ -13,7 +13,7 @@
       "name": "stavebni-knihovna-dek",
       "source": "./stavebni-knihovna-dek",
       "description": "Stavební knihovna DEK: skladby, materiály, EPD a položky ÚRS.",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "category": "construction"
     }
   ]
