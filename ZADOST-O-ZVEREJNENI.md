@@ -28,7 +28,7 @@ formulář vyžaduje; český popis je v README pluginu.
 | Version | 0.4.3 |
 | Publisher | DEKSOFT |
 | Contact e-mail | info@deksoft.eu |
-| Website | https://www.deksoft.eu |
+| Website | https://deksoft.eu |
 | Repository | https://github.com/JanStasek/Plugin-Stavebni-knihovna-DEK |
 | Plugin path | `stavebni-knihovna-dek` (marketplace `dek`) |
 | Category | Construction / Engineering |
