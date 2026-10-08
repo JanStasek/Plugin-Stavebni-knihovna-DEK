@@ -99,16 +99,43 @@ vycházej z `alternatives` u dané vrstvy.
 Když uživatel chce skladbu ocenit, sestavit rozpočet nebo výkaz výměr,
 použij `aiItemPricing` s ID skladby z vyhledávání nebo detailu.
 
-- Položky ÚRS předlož v tabulce s kódem položky, popisem, měrnou jednotkou
-  a dalšími údaji přesně tak, jak je nástroj vrátí. Kódy ani popisy
-  položek neupravuj a žádné nepřidávej z vlastní paměti.
-- Množství přepočítávej na plochu nebo rozměr zadaný uživatelem jen tam,
-  kde to měrná jednotka umožňuje, a výpočet ukaž. Kde si přepočtem nejsi
-  jistý (např. kotvení, prořezy, doplňky), řekni to.
-- Pokud výstup obsahuje ceny, uveď i jejich cenovou úroveň nebo období,
-  pokud je k dispozici. Připomeň, že výsledek je podklad pro rozpočet,
-  který je potřeba ověřit v rozpočtovém programu s aktuální cenovou
-  soustavou ÚRS.
+**Struktura výstupu:** `item.layers[]` jsou vrstvy skladby; každá má
+`pricing[]` – jednu sadu položek pro každou dostupnou tloušťku
+(`thickness`) – a v ní `p9Items[]` s položkami ÚRS (`code`,
+`description`, `unit`, `price`, `currency`) a množstvím na jednotku
+skladby (`quantity.value`, obvykle na 1 m²). `commercialP9` u položky
+jsou ceníkové položky DEK. `item.pricing.pricingDescription` popisuje,
+co cena zahrnuje a co ne. Výstup bývá dlouhý – zpracuj ho celý. Když ho
+klient uloží do souboru, čti ho nástrojem pro čtení souborů (Read), ne
+příkazy v terminálu, aby uživatel nemusel nic povolovat.
+
+- **Výběr tloušťky:** z každé vrstvy použij jen jednu sadu `pricing` –
+  pro tloušťku ze základní konfigurace skladby (`defaultThickness`
+  z `getConstructionById`), nebo pro tloušťku, kterou zadal uživatel.
+  Sady různých tlouštěk nikdy nesčítej. Vybrané tloušťky uveď. Když
+  zadaná tloušťka v `pricing` není, řekni to a nabídni dostupné.
+- **Tabulka:** po vrstvách s kódem, popisem, měrnou jednotkou, množstvím
+  na m², množstvím celkem, jednotkovou cenou a cenou celkem – kódy, popisy,
+  jednotky, ceny a množství přesně tak, jak je nástroj vrátí. Nic
+  neupravuj a žádné položky nepřidávej z vlastní paměti.
+- **Přepočet:** množství celkem = `quantity.value` × plocha (nebo jiný
+  rozměr) zadaný uživatelem, jen kde to měrná jednotka umožňuje;
+  výpočet ukaž. Bez zadané plochy uveď hodnoty na 1 m².
+- **Co nepřepočítávat:** položky s množstvím 0 nebo bez množství
+  (např. vtoky, příplatky za tloušťku) a vrstvy bez ocenění (např.
+  kotvení) vypiš zvlášť jako „doplnit podle projektu“ a do součtu je
+  nezahrnuj.
+- **Součet:** uveď orientační cenu celkem a za m² bez DPH, jen z položek
+  s množstvím.
+- **Co cena zahrnuje:** výhrady převezmi z `pricingDescription`
+  (zkráceně, bez HTML) – nevymýšlej vlastní. Uveď cenovou úroveň nebo
+  období, pokud je výstup obsahuje.
+- **Ceny DEK:** ceníkové položky DEK (`commercialP9`, kódy `DEK.…`)
+  standardně neuváděj. Na konci jednou větou nabídni, že je můžeš
+  doplnit. Když o ně uživatel požádá, přidej je jako samostatné sloupce
+  (kód, popis, cena DEK) k příslušné položce ÚRS, přesně podle výstupu.
+- Připomeň, že výsledek je podklad pro rozpočet, který je potřeba ověřit
+  v rozpočtovém programu s aktuální cenovou soustavou ÚRS.
 
 ## Zásady
 

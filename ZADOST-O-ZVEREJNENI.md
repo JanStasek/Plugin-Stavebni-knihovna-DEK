@@ -23,7 +23,7 @@ formulář vyžaduje; český popis je v README pluginu.
 |---|---|
 | Plugin name | `stavebni-knihovna-dek` |
 | Display name | Stavební knihovna DEK (DEK Building Library) |
-| Version | 0.4.1 |
+| Version | 0.4.2 |
 | Publisher | DEKSOFT |
 | Contact e-mail | info@deksoft.eu |
 | Website | https://www.deksoft.eu |
