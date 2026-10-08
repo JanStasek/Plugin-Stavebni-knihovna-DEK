@@ -11,10 +11,10 @@ formulář vyžaduje; český popis je v README pluginu.
 - [x] MCP server `https://api.deksoft.eu/mcp` odpovídá (ověřeno 2026-10-08 dotazem `searchConstructions`)
 - [x] README s popisem, příklady, instalací a kontaktem
 - [x] Zásady ochrany osobních údajů: https://deksoft.eu/ochrana-osobnich-udaju (v README a v `plugin.json` jako `privacyPolicyUrl`)
-- [x] Ikona `stavebni-knihovna-dek/icon.png` (v `plugin.json` jako `icon`); údaje pro výpis v adresáři (`displayName`, `documentationUrl`, `termsOfServiceUrl`) v `plugin.json`
+- [x] Ikona `stavebni-knihovna-dek/icon.png` (v `plugin.json` jako `icon`); údaje pro výpis v adresáři (`displayName`, `documentationUrl`, `supportUrl`, `termsOfServiceUrl`) v `plugin.json`
 - [x] Licence Apache-2.0 + `NOTICE` s povinností uvést zdroj (`LICENSE`, `NOTICE`, pole `license` v `plugin.json`)
 - [x] Repozitář je veřejný
-- [ ] Sloučit větev s úpravami do `main` (instalace z GitHubu bere výchozí větev)
+- [x] Úpravy jsou v `main` (instalace z GitHubu bere výchozí větev)
 - [ ] Volitelně: přesunout repozitář pod organizaci DEKSOFT a aktualizovat URL v `plugin.json`, README a v instalačních příkazech
 - [ ] Otestovat instalaci z GitHubu: `/plugin marketplace add JanStasek/Plugin-Stavebni-knihovna-DEK` → `/plugin install stavebni-knihovna-dek@dek` → `/skladba plochá střecha, U ≤ 0,16`
 
@@ -25,9 +25,10 @@ formulář vyžaduje; český popis je v README pluginu.
 | Plugin name | `stavebni-knihovna-dek` |
 | Display name | Stavební knihovna DEK (DEK Building Library) |
 | Icon | `stavebni-knihovna-dek/icon.png` |
-| Version | 0.4.5 |
+| Version | 0.4.6 |
 | Publisher | DEKSOFT |
 | Contact e-mail | info@deksoft.eu |
+| Support | info@deksoft.eu, https://deksoft.eu/kontakty (v `plugin.json` jako `supportUrl`) |
 | Website | https://deksoft.eu |
 | Repository | https://github.com/JanStasek/Plugin-Stavebni-knihovna-DEK |
 | Plugin path | `stavebni-knihovna-dek` (marketplace `dek`) |

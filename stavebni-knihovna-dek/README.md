@@ -39,4 +39,4 @@ licence pluginu a řídí se licenčními podmínkami DEKSOFT.
 ## Podmínky a podpora
 - Licenční podmínky dat: https://deksoft.eu/programy/licencnipodminky
 - Ochrana osobních údajů: https://deksoft.eu/ochrana-osobnich-udaju
-- Kontakt: info@deksoft.eu
+- Technická podpora: info@deksoft.eu (https://deksoft.eu/kontakty)
