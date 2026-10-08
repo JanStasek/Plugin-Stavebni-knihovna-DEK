@@ -93,6 +93,32 @@ vycházej z `alternatives` u dané vrstvy.
    cyklu (moduly, které nejsou zahrnuty, nesčítej ani nedoplňuj), platnost
    (`validTo`) a programového operátora. Upozorni na EPD s prošlou platností.
 5. Při sčítání za celou skladbu jasně odliš, které vrstvy EPD mají a které ne.
+6. **Jednotky ukazatelů:** API je u ukazatelů nevrací. Uváděj je podle
+   ČSN EN 15804+A2 (tabulka níže) a jednou poznamenej, že jde o jednotky
+   dle normy, ne z dat EPD. Platí jen pro EPD podle EN 15804+A2; u jiné
+   normy (`usedStandard`) jednotky neuváděj a řekni, že je výstup neobsahuje.
+
+| Klíč v API | Ukazatel | Jednotka (na deklarovanou jednotku) |
+|---|---|---|
+| `GWPTotal`, `GWPFossil`, `GWPBiogenic`, `GWPLuluc` | GWP | kg CO₂ ekv. |
+| `ozoneDepletionPotential` | ODP | kg CFC-11 ekv. |
+| `acidificationPotencial` | AP | mol H⁺ ekv. |
+| `freshwaterEP` | EP-sladká voda | kg P ekv. |
+| `seawaterEP` | EP-moře | kg N ekv. |
+| `soilEP` | EP-terestrické | mol N ekv. |
+| `groundLevelOzone` | POCP | kg NMVOC ekv. |
+| `mineralsMetalsADP` | ADP-minerály a kovy | kg Sb ekv. |
+| `fossilFuelsADP` | ADP-fosilní zdroje | MJ |
+| `waterScarcityPotential` | WDP | m³ světového ekv. odebrané vody |
+| `potentialDiseasePM` | PM | výskyt onemocnění |
+| `isotopeU235Exposure` | IRP | kBq U235 ekv. |
+| `ETPfw` | ETP-fw | CTUe |
+| `HTPc`, `HTPnc` | HTP-c, HTP-nc | CTUh |
+| `SQP` | SQP | bezrozměrné |
+| `consPERE` … `consPENRT`, `consRSF`, `consNRSF`, `exportedEnergy` | energie, paliva | MJ |
+| `consSM`, `constructionUnitsReuse`, `materialsRecycling`, `materialsEnergyRecovery` | materiály | kg |
+| `consFW` | čistá voda | m³ |
+| `hazardousWasteDisposed`, `otherWasteDisposed`, `radioactiveWasteDisposed` | odpady | kg |
 
 ## Ocenění skladby (ÚRS)
 
@@ -105,9 +131,7 @@ použij `aiItemPricing` s ID skladby z vyhledávání nebo detailu.
 `description`, `unit`, `price`, `currency`) a množstvím na jednotku
 skladby (`quantity.value`, obvykle na 1 m²). `commercialP9` u položky
 jsou ceníkové položky DEK. `item.pricing.pricingDescription` popisuje,
-co cena zahrnuje a co ne. Výstup bývá dlouhý – zpracuj ho celý. Když ho
-klient uloží do souboru, čti ho nástrojem pro čtení souborů (Read), ne
-příkazy v terminálu, aby uživatel nemusel nic povolovat.
+co cena zahrnuje a co ne. Výstup bývá dlouhý – zpracuj ho celý.
 
 - **Výběr tloušťky:** z každé vrstvy použij jen jednu sadu `pricing` –
   pro tloušťku ze základní konfigurace skladby (`defaultThickness`
@@ -142,6 +166,10 @@ příkazy v terminálu, aby uživatel nemusel nic povolovat.
 - Výstupy jsou podklad pro návrh, nenahrazují projektovou dokumentaci ani
   posouzení autorizovanou osobou; u návrhových doporučení to krátce připomeň.
 - Hodnoty uváděj s jednotkami z API a odbornou terminologii podle ČSN / EN.
+- Dlouhý výstup nástroje (vyhledávání, EPD, ocenění), který klient uloží
+  do souboru, čti nástrojem pro čtení souborů (Read), ne příkazy
+  v terminálu (`jq`, `grep`, `python` apod.), aby uživatel nemusel nic
+  povolovat.
 - Do popisu, porovnání ani doporučení neuváděj vlastnosti, které
   nástroje nevrátily (cena, hmotnost, dostupnost, životnost apod.), ani
   s výhradou „neověřeno“ a ani nepřímo („levnější“, „lehčí“, „běžnější“).
