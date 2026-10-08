@@ -17,9 +17,13 @@ ocenění skladeb.
 - „Jaká je GWP fáze A1–A3 pro 200 mm EPS 100 S?“
 - „Připrav položky ÚRS pro ocenění této střešní skladby na 450 m².“
 
+## Požadavky
+Plugin se připojuje ke vzdálenému MCP serveru `https://api.deksoft.eu/mcp`
+(HTTP). Nevyžaduje přihlášení ani API klíč a nic neinstaluje lokálně.
+
 ## Instalace (Claude Code)
 ```
-/plugin marketplace add <org>/stavebni-knihovna-dek
+/plugin marketplace add JanStasek/Plugin-Stavebni-knihovna-DEK
 /plugin install stavebni-knihovna-dek@dek
 ```
 
