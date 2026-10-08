@@ -1,7 +1,5 @@
 # Stavební knihovna DEK – plugin pro Claude
 
-<img src="icon.png" alt="Stavební knihovna DEK" width="96" height="96">
-
 Plugin zpřístupňuje v Claude Stavební knihovnu DEK: skladby konstrukcí
 a systémů, materiály a výrobky,
 jejich environmentální data (EPD) a položky cenové soustavy ÚRS pro
