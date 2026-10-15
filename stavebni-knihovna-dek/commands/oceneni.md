@@ -8,3 +8,5 @@ Načti k ní položky cenové soustavy ÚRS nástrojem `aiItemPricing` a předlo
 je v tabulce podle oddílu „Ocenění skladby (ÚRS)“ ve skillu – pro tloušťky
 zadané uživatelem, jinak pro základní konfiguraci. Je-li zadaná plocha,
 přepočti množství tam, kde to měrná jednotka umožňuje, a výpočet ukaž.
+Nástroj `aiItemPricing` vyžaduje přihlášení účtem DEKSOFT – pokud ověření
+selže, postupuj podle oddílu „Přihlášení“ ve skillu.

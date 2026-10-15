@@ -19,7 +19,15 @@ ocenění skladeb.
 
 ## Požadavky
 Plugin se připojuje ke vzdálenému MCP serveru `https://api.deksoft.eu/mcp`
-(HTTP). Nevyžaduje přihlášení ani API klíč a nic neinstaluje lokálně.
+(HTTP) a nic neinstaluje lokálně.
+
+- **Skladby, materiály a EPD** fungují bez přihlášení.
+- **Ocenění v ÚRS** (`/oceneni`, nástroj `aiItemPricing`) vyžaduje
+  přihlášení účtem DEKSOFT přes OAuth (oprávnění `bimplugin:read`).
+  V Claude Code spusťte `/mcp`, vyberte server `stavebni-knihovna-dek`
+  a zvolte **Authenticate** – v prohlížeči se otevře přihlášení DEKSOFT.
+  Bez interaktivní relace lze použít
+  `claude mcp login plugin:stavebni-knihovna-dek:stavebni-knihovna-dek`.
 
 ## Instalace (Claude Code)
 ```
