@@ -125,6 +125,18 @@ vycházej z `alternatives` u dané vrstvy.
 Když uživatel chce skladbu ocenit, sestavit rozpočet nebo výkaz výměr,
 použij `aiItemPricing` s ID skladby z vyhledávání nebo detailu.
 
+**Přihlášení:** `aiItemPricing` jako jediný nástroj vyžaduje přihlášení
+účtem DEKSOFT (OAuth); ostatní nástroje fungují bez přihlášení. Když
+volání selže kvůli ověření (např. „401“, „invalid_token“, „needs
+authentication“, „sign in“), nezkoušej ho opakovaně a nehledej ceny jinde.
+Řekni uživateli, ať se přihlásí, a pokračuj s tím, co jde bez přihlášení
+(skladba, vrstvy, parametry):
+- v Claude Code: příkaz `/mcp` → server `stavebni-knihovna-dek` →
+  Authenticate (nebo v terminálu
+  `claude mcp login plugin:stavebni-knihovna-dek:stavebni-knihovna-dek`),
+- v aplikaci Claude / claude.ai: připojit konektor v nastavení konektorů.
+Po přihlášení stačí požadavek zopakovat.
+
 **Struktura výstupu:** `item.layers[]` jsou vrstvy skladby; každá má
 `pricing[]` – jednu sadu položek pro každou dostupnou tloušťku
 (`thickness`) – a v ní `p9Items[]` s položkami ÚRS (`code`,

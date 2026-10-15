@@ -9,6 +9,7 @@ formulář vyžaduje; český popis je v README pluginu.
 - [x] Manifest `stavebni-knihovna-dek/.claude-plugin/plugin.json` – `claude plugin validate` prochází
 - [x] Marketplace `.claude-plugin/marketplace.json` – `claude plugin validate` prochází
 - [x] MCP server `https://api.deksoft.eu/mcp` odpovídá (ověřeno 2026-10-08 dotazem `searchConstructions`)
+- [x] Ocenění (`aiItemPricing`) vyžaduje OAuth; ostatní nástroje bez přihlášení (ověřeno 2026-10-15)
 - [x] README s popisem, příklady, instalací a kontaktem
 - [x] Zásady ochrany osobních údajů: https://deksoft.eu/ochrana-osobnich-udaju (v README a v `plugin.json` jako `privacyPolicyUrl`)
 - [x] Ikona `stavebni-knihovna-dek/icon.png` (v `plugin.json` jako `icon`); údaje pro výpis v adresáři (`displayName`, `documentationUrl`, `supportUrl`, `termsOfServiceUrl`) v `plugin.json`
@@ -25,7 +26,7 @@ formulář vyžaduje; český popis je v README pluginu.
 | Plugin name | `stavebni-knihovna-dek` |
 | Display name | Stavební knihovna DEK (DEK Building Library) |
 | Icon | `stavebni-knihovna-dek/icon.png` |
-| Version | 0.4.6 |
+| Version | 0.5.0 |
 | Publisher | DEKSOFT |
 | Contact e-mail | info@deksoft.eu |
 | Support | info@deksoft.eu, https://deksoft.eu/kontakty (v `plugin.json` jako `supportUrl`) |
@@ -33,7 +34,7 @@ formulář vyžaduje; český popis je v README pluginu.
 | Repository | https://github.com/JanStasek/Plugin-Stavebni-knihovna-DEK |
 | Plugin path | `stavebni-knihovna-dek` (marketplace `dek`) |
 | Category | Construction / Engineering |
-| MCP server | `https://api.deksoft.eu/mcp` (remote HTTP, no authentication) |
+| MCP server | `https://api.deksoft.eu/mcp` (remote HTTP; OAuth only for `aiItemPricing`, scope `bimplugin:read`, authorization server `https://next.deksoft.eu`) |
 | Terms | https://deksoft.eu/programy/licencnipodminky |
 | Privacy policy | https://deksoft.eu/ochrana-osobnich-udaju |
 | License | Apache-2.0 (attribution via NOTICE) |
@@ -56,7 +57,8 @@ conversion factors) and ÚRS price-system items for cost estimating of an
 assembly.
 
 Contents:
-- MCP connector to the DEKSOFT API (read-only, no account required)
+- MCP connector to the DEKSOFT API (read-only; search, details and EPD need
+  no account, ÚRS cost items require signing in with a DEKSOFT account via OAuth)
 - Skill `stavebni-knihovna` – how to search, read and present library data
   correctly (never inventing values, EPD recalculation, ÚRS item handling,
   citing the DEK Building Library as the source)
@@ -74,8 +76,11 @@ Contents:
 
 ### Data and safety
 - All tools are read-only; the plugin does not write or modify any data.
-- No authentication, API keys or personal data are required. User queries
-  are sent to `api.deksoft.eu` only to search the library.
+- Searching, details and EPD data need no authentication. Only the ÚRS
+  cost items (`aiItemPricing`) require the user to sign in with a DEKSOFT
+  account via standard MCP OAuth (scope `bimplugin:read`, authorization
+  server `https://next.deksoft.eu`); no API keys are stored in the plugin.
+  User queries are sent to `api.deksoft.eu` only to query the library.
 - Outputs are design support material and do not replace project
   documentation or assessment by an authorized person; the skill instructs
   Claude to state this.
