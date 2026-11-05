@@ -6,7 +6,7 @@ jejich environmentální data (EPD) a položky cenové soustavy ÚRS pro
 ocenění skladeb.
 
 ## Obsah
-- **MCP konektor** `stavebni-knihovna-dek` (`https://api.deksoft.eu/mcp`)
+- **MCP konektor** `stavebni-knihovna-dek` (`https://api.deksoft.eu/mcp/knihovna`)
 - **Skill** `stavebni-knihovna` – jak vyhledávat, číst a prezentovat data,
   včetně přepočtu EPD podle tloušťky
 - **Příkazy** `/skladba`, `/material`, `/epd`, `/oceneni`
@@ -18,7 +18,7 @@ ocenění skladeb.
 - „Připrav položky ÚRS pro ocenění této střešní skladby na 450 m².“
 
 ## Požadavky
-Plugin se připojuje ke vzdálenému MCP serveru `https://api.deksoft.eu/mcp`
+Plugin se připojuje ke vzdálenému MCP serveru `https://api.deksoft.eu/mcp/knihovna`
 (HTTP) a nic neinstaluje lokálně.
 
 - **Skladby, materiály a EPD** fungují bez přihlášení.

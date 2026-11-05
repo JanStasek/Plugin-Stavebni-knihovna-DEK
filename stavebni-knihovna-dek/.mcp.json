@@ -2,7 +2,7 @@
   "mcpServers": {
     "stavebni-knihovna-dek": {
       "type": "http",
-      "url": "https://api.deksoft.eu/mcp",
+      "url": "https://api.deksoft.eu/mcp/knihovna",
       "oauth": {
         "scopes": "bimplugin:read"
       }

@@ -14,7 +14,7 @@ data EPD a položky cenové soustavy ÚRS.
 .claude-plugin/marketplace.json        # katalog marketplace „dek“
 stavebni-knihovna-dek/
   .claude-plugin/plugin.json           # manifest pluginu
-  .mcp.json                            # MCP konektor https://api.deksoft.eu/mcp
+  .mcp.json                            # MCP konektor https://api.deksoft.eu/mcp/knihovna
   skills/stavebni-knihovna/SKILL.md    # skill
   commands/                            # /skladba, /material, /epd, /oceneni
 ```

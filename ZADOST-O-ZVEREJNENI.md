@@ -8,7 +8,7 @@ formulář vyžaduje; český popis je v README pluginu.
 
 - [x] Manifest `stavebni-knihovna-dek/.claude-plugin/plugin.json` – `claude plugin validate` prochází
 - [x] Marketplace `.claude-plugin/marketplace.json` – `claude plugin validate` prochází
-- [x] MCP server `https://api.deksoft.eu/mcp` odpovídá (ověřeno 2026-10-08 dotazem `searchConstructions`)
+- [x] MCP server `https://api.deksoft.eu/mcp/knihovna` odpovídá (ověřeno 2026-11-05 dotazem `searchConstructions`)
 - [x] Ocenění (`aiItemPricing`) vyžaduje OAuth; ostatní nástroje bez přihlášení (ověřeno 2026-10-15)
 - [x] README s popisem, příklady, instalací a kontaktem
 - [x] Zásady ochrany osobních údajů: https://deksoft.eu/ochrana-osobnich-udaju (v README a v `plugin.json` jako `privacyPolicyUrl`)
@@ -26,7 +26,7 @@ formulář vyžaduje; český popis je v README pluginu.
 | Plugin name | `stavebni-knihovna-dek` |
 | Display name | Stavební knihovna DEK (DEK Building Library) |
 | Icon | `stavebni-knihovna-dek/icon.png` |
-| Version | 0.5.0 |
+| Version | 0.5.1 |
 | Publisher | DEKSOFT |
 | Contact e-mail | info@deksoft.eu |
 | Support | info@deksoft.eu, https://deksoft.eu/kontakty (v `plugin.json` jako `supportUrl`) |
@@ -34,7 +34,7 @@ formulář vyžaduje; český popis je v README pluginu.
 | Repository | https://github.com/JanStasek/Plugin-Stavebni-knihovna-DEK |
 | Plugin path | `stavebni-knihovna-dek` (marketplace `dek`) |
 | Category | Construction / Engineering |
-| MCP server | `https://api.deksoft.eu/mcp` (remote HTTP; OAuth only for `aiItemPricing`, scope `bimplugin:read`, authorization server `https://next.deksoft.eu`) |
+| MCP server | `https://api.deksoft.eu/mcp/knihovna` (remote HTTP; OAuth only for `aiItemPricing`, scope `bimplugin:read`, authorization server `https://next.deksoft.eu`) |
 | Terms | https://deksoft.eu/programy/licencnipodminky |
 | Privacy policy | https://deksoft.eu/ochrana-osobnich-udaju |
 | License | Apache-2.0 (attribution via NOTICE) |
